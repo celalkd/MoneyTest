@@ -18,6 +18,8 @@ public class Money {
 	public boolean equals(Money m){
 		if(m.getAmount()==this.amount && m.getClass()== this.getClass())
 			return true;
+		if(m.getClass()!=this.getClass() && m.getAmount()/m.getRate()==this.amount/this.rate)
+			return true;
 		return false;
 			
 	}
